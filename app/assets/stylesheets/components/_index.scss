@@ -1,3 +1,196 @@
 // Import your components CSS files here.
 @import "alert";
 @import "navbar";
+
+.home {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    overflow: hidden;
+    color: white;
+    h3 {
+      text-align: center;
+      margin-bottom: 30px;
+      letter-spacing: 8px;
+      font-weight: 200;
+    strong {
+      font-weight: 450;
+    }
+    }
+    h4 {
+      margin-top: 40px;
+      margin-bottom: 90px;
+      letter-spacing: 10px;
+      font-weight: 250;
+    strong {
+      font-weight: 450;
+    }
+    }
+    h7 {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      letter-spacing: 6px;
+      font-weight: 150;
+    strong {
+      font-weight: 150;
+    }
+    }
+    .souligne {
+
+    a {
+      margin-top: 40px;
+      color: white;
+      font-weight: 250;
+      letter-spacing: 6px;
+    }
+    a:hover {
+      background-image: linear-gradient(to right, white 50%, transparent 50%);
+      background-position: 0 1.09em;
+      background-repeat: repeat-x;
+      background-size: 4px 2px;
+      text-decoration: none;
+    }
+    }
+}
+
+.loader {
+    width: 10em;
+    height: 10em;
+    font-size: 15px;
+    box-sizing: border-box;
+    border-top: 0.3em solid hotpink;
+    border-radius: 50%;
+    position: relative;
+    animation: rotating 4s ease-in-out infinite;
+    --direction: 1;
+}
+
+.loader::before,
+.loader::after {
+    content: '';
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    box-sizing: border-box;
+    top: -0.2em;
+}
+
+.loader::before {
+    border-top: 0.3em solid dodgerblue;
+    transform: rotate(120deg);
+}
+
+.loader::after {
+    border-top: 0.3em solid gold;
+    transform: rotate(240deg);
+}
+
+.loader span {
+    position: absolute;
+    color: white;
+    width: inherit;
+    height: inherit;
+    text-align: center;
+    line-height: 10em;
+    font-family: sans-serif;
+    animation: rotating 4s linear infinite;
+    --direction: -1;
+}
+
+@keyframes rotating {
+    50% {
+        transform: rotate(calc(120deg * var(--direction)));
+    }
+
+    100% {
+        transform: rotate(calc(360deg * var(--direction)));
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*IGNORE ALL THE ABOVE*/
+.icons {
+  margin-top: 5px;
+  padding-right: 6vh;
+}
+
+.icons li {
+  display:inline-block;
+  margin: 8px;
+}
+.icons i  {
+    font-size: 24px;
+    height: 64px;
+    line-height: 64px;
+    text-align: center;
+    width: 64px;
+    border-radius: 100%;
+    color:#fff;
+    box-shadow: inset 0 0 0 1px #d7d7d7;
+    position: relative;
+    cursor: crosshair;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+.icons i:hover, .icons i:focus {
+  color: #fff;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.8);
+  -moz-transform: rotate(5deg) scale(1.1);
+    -ms-transform: rotate(5deg) scale(1.1);
+    -webkit-transform: rotate(5deg) scale(1.1);
+    transform: rotate(5deg) scale(1.1);
+  /*fallback*/
+  background-image: -webkit-linear-gradient(left, #2caab3 0%, #2c8cb3 100%);
+  background-image: -moz-linear-gradient(left, #2caab3 0%, #2c8cb3 100%);
+  background-image: -o-linear-gradient(left, #2caab3 0%, #2c8cb3 100%);
+  background-image: linear-gradient(to right, #2caab3 0%, #2c8cb3 100%);
+  background-image: -webkit-linear-gradient(90deg, #2caab3 0%, #2c8cb3 100%);
+  background-image: -ms-linear-gradient(90deg, #2caab3 0%, #2c8cb3 100%);
+}
+// .icons .fa-twitter:hover, .icons .fa-twitter:focus {
+//   background-image: -webkit-linear-gradient(left, #2caab3 0%, #2c8cb3 100%);
+//   background-image: -moz-linear-gradient(left, #2caab3 0%, #2c8cb3 100%);
+//   background-image: -o-linear-gradient(left, #2caab3 0%, #2c8cb3 100%);
+//   background-image: linear-gradient(to right, #2caab3 0%, #2c8cb3 100%);
+//   background-image: -webkit-linear-gradient(90deg, #2caab3 0%, #2c8cb3 100%);
+//   background-image: -ms-linear-gradient(90deg, #2caab3 0%, #2c8cb3 100%);
+// }
+
+.icons .fa-envelope:hover, .icons .fa-envelope:focus {
+  background-image: -webkit-linear-gradient(left, dodgerblue  10%, hotpink 100%);
+  background-image: -moz-linear-gradient(left, dodgerblue  10%, hotpink 100%);
+  background-image: -o-linear-gradient(left, dodgerblue  10%, hotpink 100%);
+  background-image: linear-gradient(to right, dodgerblue  10%, hotpink 100%);
+  background-image: -webkit-linear-gradient(90deg, dodgerblue  10%, hotpink 100%);
+  background-image: -ms-linear-gradient(90deg, dodgerblue  10%, hotpink 100%);
+}
+
+
+.icons .fa-linkedin:hover, .icons .fa-linkedin:focus {
+  background-image: -webkit-linear-gradient(left, hotpink 10%, #34495e 100%);
+  background-image: -moz-linear-gradient(left, hotpink 10%, gold 100%);
+  background-image: -o-linear-gradient(left, hotpink  10%, gold 100%);
+  background-image: linear-gradient(to right, hotpink  10%, gold 100%);
+  background-image: -webkit-linear-gradient(90deg, hotpink 10%, gold  100%);
+  background-image: -ms-linear-gradient(90deg, hotpink 10%, gold 100%);
+
+}
+
+
